@@ -53,15 +53,25 @@ Hands are compared using rank and if ranks are equal - by higher cart value or h
 Ranks:
 
 Rank | Combination | Description
+
 1 | High card | Highest value card
+
 2 | Pair Two | cards of same value
+
 3 | Two pairs | Two different pairs
+
 4 | Three of a kind | Three cards of the same value
+
 5 | Straight | All five cards in consecutive value order
+
 6 | Flush | All five cards having the same suit
+
 7 | Full house | Three of a kind and a Pair
+
 8 | Four of a kind | Four cards of the same value
+
 9 | Straight flush | All five cards in consecutive value order, with the same suit
+
 10 | Royal Flush | Ten, Jack, Queen, King and Ace in the same suit
 
 Wins of player 1 and player 2 are counted during session.
