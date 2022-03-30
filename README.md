@@ -29,38 +29,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
@@ -68,3 +36,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Poker hand ranking
+
+Compare two hands, each should have 5 combination of face and suit in format '4H' where first symbol is face, second - suit.
+
+Available faces: 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A
+
+Suits are not validated currently, and could be each symbol.
+
+You should provide to input cards for two hands, separated by space, like: 'AH 9S 4D TD 8S 4H JS 3C TC 8D', where 'AH 9S 4D TD 8S' - first hand carts and '4H JS 3C TC 8D' second.
+
+Hands are compared using rank and if ranks are equal - by higher cart value or higher cart of combination.
+
+Ranks:
+
+Rank | Combination | Description
+1 | High card | Highest value card
+2 | Pair Two | cards of same value
+3 | Two pairs | Two different pairs
+4 | Three of a kind | Three cards of the same value
+5 | Straight | All five cards in consecutive value order
+6 | Flush | All five cards having the same suit
+7 | Full house | Three of a kind and a Pair
+8 | Four of a kind | Four cards of the same value
+9 | Straight flush | All five cards in consecutive value order, with the same suit
+10 | Royal Flush | Ten, Jack, Queen, King and Ace in the same suit
+
+Wins of player 1 and player 2 are counted during session.
