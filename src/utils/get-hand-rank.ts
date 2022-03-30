@@ -11,11 +11,11 @@ const count = (c: Record<number, number>, a: number): Record<number, number> => 
 };
 
 export const getHandRank = (hand: string): HandRank => {
-  const cards = hand.split(' '); // get carts of one hand
+  const cards = hand.split(' '); // get cards of one hand
   const faces = cards.map(a => ORDER.indexOf(a[0])).sort((a, b) => b - a); // get array of faces weight (from 0 for 2 to 12 for Ace)
   const suits = cards.map(a => a[1]).sort(); // get array of suits
-  const uniqueFaces: Record<number, number> = faces.reduce(count, {}); // object where key is cart weight, value - the number of such carts that hand have
-  const duplicationLevel: Record<number, number> = Object.values(uniqueFaces).reduce(count, {}); // object where key - number of duplicated carts, value - number of such 'pairs'
+  const uniqueFaces: Record<number, number> = faces.reduce(count, {}); // object where key is card weight, value - the number of such cards that hand have
+  const duplicationLevel: Record<number, number> = Object.values(uniqueFaces).reduce(count, {}); // object where key - number of duplicated cards, value - number of such 'pairs'
   const flush = suits[0] === suits[4]; // all suits are the same
   const straight = faces.every((face, index) => faces[0] - face === index);
   const rank =

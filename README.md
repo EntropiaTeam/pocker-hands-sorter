@@ -46,9 +46,9 @@ Available faces: 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A
 
 Suits are not validated currently, and could be each symbol.
 
-You should provide to input cards for two hands, separated by space, like: 'AH 9S 4D TD 8S 4H JS 3C TC 8D', where 'AH 9S 4D TD 8S' - first hand carts and '4H JS 3C TC 8D' second.
+You should provide to input cards for two hands, separated by space, like: 'AH 9S 4D TD 8S 4H JS 3C TC 8D', where 'AH 9S 4D TD 8S' - first hand cards and '4H JS 3C TC 8D' second.
 
-Hands are compared using rank and if ranks are equal - by higher cart value or higher cart of combination.
+Hands are compared using rank and if ranks are equal - by higher card value or higher card of combination.
 
 Ranks:
 
